@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Drunkard</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="app.css" />
+	</head>
+	<body>
+		<div class="mainBody">
+			<div class="sidePanel">
+				<div class="gameStatus">
+					<div class="gameTime">
+						<h3>Game Time</h3>
+						<div class="timerBox">
+							<span class="timer">00:00</span>
+						</div>
+					</div>
+
+					<div class="roundResults">
+							<h3 class="roundResultsHeader">Card status:</h3>
+							<ul class="cardStatus"></ul>
+					</div>
+					
+				</div>
+				<div class="footer">
+					<div class="btn">
+						<button class="showRules">
+							<span class="buttonContent">Show Rules
+							</span>
+						</button>
+					</div>
+					
+				</div>
+			</div>
+			<div class="playTable">
+				<div class="winnerIs hidden">
+					<div class='winnerName'>
+						<h1></h1>
+						<div class='gameLength'>You played for <span class="showTime"></span> minutes!</div>
+						<div class="btn-box">
+							<button class="playAgain">
+								<span class="buttonContent">Play Again</span>
+							</button>
+							<button class="returnMenu">
+								<a href="index.html" class="buttonContent"><span >Return to menu</span></a>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="rules hidden">
+					<p>
+						<b>Drunkard game</b> is a card game that lies in drawing cards
+						and then comparing them.
+					</p>
+					<p>
+						<b>1.</b> Each player randomly gets the half of
+						the deck either red or black.
+					</p>
+					<p>
+						<b>2.</b> Then players draw their top card at the same time. Player who
+						drew the card with the higher value gets both of the cards to
+						their deck. When players draw the cards with the same values
+						then 'battle' begins.
+					</p>
+					<p>
+						<b>3.</b> They should draw three more cards and then whose third card
+						has higher value gets all of the cards. If one of the players
+						doesn't have enough cards for the 'battle' other player should
+						borrow them their cards.
+					</p>
+					<p>
+						<b>4.</b> Apart from that there is one more rule regarding cards'
+						values: the Aces are higher than any card except from the 6
+						card. And the 6 cards are smaller than any card from the deck
+						but Aces.
+					</p>
+					<p>
+						<b>5.</b> The more cards you have the better. Wins the person who can
+						get the whole deck.
+					</p>
+					<div class="btn-box">
+						<button class="closeRules">
+							<span class="buttonContent">Close</span>
+						</button>
+					</div>
+					
+				</div>
+				<div class="overlay hidden"></div>
+				<div class="playerCSection">
+					<h2>Computer's deck -</h2>
+					<h2 class="cardsCounterC">18</h2>
+					<div class="cards">
+						<div class="card-container CCC ">
+							<div class="card cardC">
+								 <div class="card-face front">
+									  <img src="assets/back.svg" alt="Back of card"/>
+								 </div>
+								 <div class="card-face">
+									  <img src="assets/back.svg" alt="" class="back"/>
+								 </div>
+							</div>
+					  </div>
+						<div class="playerCDeck deck">
+							<img src="assets/back.svg" alt="" class="currentCCardBack">
+							<img src="assets/back.svg" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="playActions">
+					<button class="drawCard">
+						<span class="buttonContent">Draw
+						</span>
+					</button>
+					<button class="retrieveCardBtn">
+						<span id="retrieve" class="buttonContent">Retrieve
+						</span>
+					</button>
+				</div>
+				<div class="playerSection">
+					<h2>Your deck -</h2>
+					<h2 class="cardsCounterP">18</h2>
+					<div class="cards">
+						<div class="card-container playerCC ">
+							<div class="card cardP">
+								 <div class="card-face front">
+									  <img src="assets/back.svg" alt="Back of card"/>
+								 </div>
+								 <div class="card-face ">
+									  <img src="assets/back.svg" alt="" class="back"/>
+								 </div>
+							</div>
+					  </div>
+						<div class="playerDeck deck">
+							<img src="assets/back.svg" alt="" class="currentPCardBack">
+							<img src="assets/back.svg" alt="" srcset="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="winnerIs hidden"></div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
